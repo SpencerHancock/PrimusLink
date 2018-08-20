@@ -1,0 +1,495 @@
+@import
+url("https://fonts.googleapis.com/css?family=Raleway:300,400,700,900");
+
+img{
+	max-width:100%;
+	height: auto;
+}
+
+.container{
+	width:95%;
+	margin: 0 auto;
+}
+
+*{
+	box-sizing: border-box;
+	transition: all ease-in-out 150ms;
+}
+body{
+	margin: 0;
+	font-family: "Raleway", sans-serif;
+	text-align:center;
+}
+.clearfix::after,
+section::after,
+footer::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+/*typography
+========================*/
+.title{
+	font-size:2.5rem;
+	color:white;
+	margin-bottom: 1.5em;
+}
+.title span{
+	font-weight: 300;
+	display: block;	
+	font-size: .8em;
+	color:white;
+}
+.title left{
+	color:#a63434;
+	display: block;
+}
+.title right{
+	color: #85C9C9;
+	display: block;
+}
+.sign-up-cta{
+	font-weight: 300;
+	font-size: 2.5rem;
+}
+@media (min-width: 45rem ){
+	.title left{
+	display: inline;
+	}
+	.title right{
+		display: inline;
+	
+	}
+}
+
+@media (min-width: 60rem ){
+
+	.title{
+		font-size:3.5rem;
+	}
+}
+
+@media (min-width: 85rem ){
+
+	.title{
+		font-size:4.5rem;
+	}
+}
+@media(min-width: 90rem){
+	.title{
+		font-size:6rem;
+
+}
+}
+@media screen and (max-height: 60em) and (min-width: 90rem){
+	.title{
+		margin-bottom: 0;
+
+}
+}
+.home-about-textbox h1, p{
+	font-weight: 300;}
+
+.home-about-textbox h1{
+	font-size: 1.325em
+}
+
+/*buttons
+================*/
+.button{
+	display: inline-block;
+	font-size: 1rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: .5em 1.5em;
+	border: 2px solid;
+}
+.button-accent{
+	color:white;
+	border-color: white;
+}
+.button-accent:hover, .button-accent:focus{
+	background: white;
+	color:#DDD;
+}
+
+.button-small{
+	color:white;
+	font-size: 0.8rem;
+	border: 1px white solid;
+	width:70%;
+}
+.login-button{
+	margin:0;
+	color:#a63434;
+}
+.login-button:hover, .login-button:focus{
+	background: rgba(178, 34, 34, .5);
+}
+.facebook-button{
+	color: #85C9C9;
+	font-weight:700;
+}
+.twitter-button{
+	color:#a63434;
+	font-weight:700;
+}
+.twitter-button:hover, .twitter-button:focus{
+	background: rgba(166,52,52, .25)
+}
+.facebook-button:hover, .facebook-button:focus{
+	background: rgba(133,201,201, .25)
+}
+.cta-button{
+	color:white;
+	font-size:1.2em;
+}
+.cta-button:hover, .cta-button:focus{
+	background: rgba(255,255,255,0.25);
+}
+/*header
+==============================*/
+
+header{
+	position:absolute;
+	left:0;
+	right: 0;
+	margin-top: 1em;
+}
+.top-options{
+	width:30%;
+	margin: 0 0;
+}
+
+.logo{
+	height:4em;
+	object-fit: scale-down;
+	margin: 0 1rem;
+	filter: invert(1);
+}
+nav ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+}
+nav  li{
+	display:inline-block;
+	margin:0 1em;
+}
+nav a{
+	font-weight: 900;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size:.8rem;
+	padding: .75em;
+	color:white;
+	text-align: center;
+}
+nav a:hover{
+	color:#DDD;
+}
+@media (min-width: 20rem){
+	.top-options{
+		width:23%;
+	}
+}
+
+@media (min-width: 70rem){
+	.top-options{
+		width:auto;
+	}
+	.logo{
+		float:left;
+	}
+	nav{
+		float:right;
+	}
+	.login-list{
+		margin-right:1em;
+	}
+}
+
+/*home-hero area
+===================*/
+.full-signup{
+	background: rgba(255,255,255,.9);
+	display: none;
+	float:center;
+	position: relative;
+	left:50%;
+	transform: translate(-50%);
+	padding:0em 0em 1em 0em ;
+	width:40em;
+	outline:black dashed;
+	outline-offset: -1em;
+}
+ .sign-up-button{
+ 	width:40%;
+ }
+.full-signup ul{
+	padding: 0;
+	list-style-type: none;
+	float: center;
+}
+.full-signup li{
+	margin: 0 1em 0 1em;
+	text-align: center;
+}
+.full-signup input{
+	font-size:1.3em;
+}
+.full-signup h2{
+	padding-top:.5em;
+	margin:0;
+}
+
+h2::after {
+	content="It's Free";
+	background:black;
+	color:black;
+	font-size:0.7em;
+	display: block;
+}
+.home-hero{
+	background: url("../img/maya2.jpg") center center;
+	background-size:cover;
+	padding:10em 0 10em 0;
+}
+@media (min-width:65){
+	.home-hero{
+		min-height: 45rem;
+	}
+}
+@media (min-width: 55rem ){
+	.home-hero{
+		min-height:50rem;
+		height:100vh;
+
+}
+
+}
+@media (min-width: 60rem){
+	.button-accent{
+		font-size:2.5rem;
+}
+
+}
+@media (min-width: 65rem){
+
+	.full-signup{
+		display:block;
+
+	}
+	.button-accent{
+		display:none;
+		font-size:2.5rem;
+}
+
+}
+
+/*home-about area
+===================*/
+.home-about{
+	margin-top: 3em; 
+	padding: 2em 0;
+}
+.home-about-textbox{
+	font-weight: 300;
+	padding: 4em;
+	width:100vw;
+	position: relative;
+	outline: 2px black solid;
+	outline-offset: -2em;
+	margin-left:-2.5%;
+
+
+
+}
+.home-about-textbox h1{
+	position: absolute;
+	padding: 0 1em;
+	background: white;
+	top:-.15em;
+	left: 50%;
+	transform: translateX(-50%);
+
+
+}
+
+@media (min-width:40rem){
+	.home-about-textbox h1{
+		font-size: 2em;
+		top:-.5em;
+	}
+
+}
+@media (min-width: 60rem){
+	.home-about-textbox{
+		top:-5em;
+		left: 5em;
+		float: left;
+		width:60vw;
+		background: #85C9C9;
+		box-shadow: 0 0 4em 0 rgba(0,0,0,.35);
+	}
+
+@media (min-width: 65rem){
+	.home-about-textbox{
+		left: 5em;
+		width:30vw;
+	}}
+	.home-about{
+		background: url(../img/subway.jpg) top;
+		background-position: top right;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-bottom: 15em;
+		min-height:50rem;
+	}
+	.home-about-textbox h1{
+		background:#85C9C9;
+		top:-0.2em;
+		font-size:1.46em;
+	}
+
+}
+
+/*portfolio section
+=====================*/
+.portfolio{
+	margin:3 0 0;
+}
+
+
+.port-item{
+	margin:0;
+	position: relative;
+
+}
+.port-item img{
+	display:block;
+}
+.portfolio h1{
+	font-weight: 300;
+	font-size: 4rem;
+}
+.port-desc{
+	position: absolute;
+	z-index: 100;
+	bottom:0em;
+	left:0em;
+	right: 0em;
+	color:white;
+	padding-bottom:1em;
+	background: rgba(0,0,0,.5);}
+
+.port-desc p{
+	margin: 1em;
+}
+@media (min-width: 40rem){
+	.port-item{
+		width:50%;
+		float:left;
+		overflow: hidden;
+	}
+	.port-desc{
+		display:none;
+	}
+	.port-item:hover .port-desc{
+		display:block;
+	}
+}
+@media (min-width: 60rem){
+		.port-item{
+		width:33.333333333%;
+		overflow:hidden;
+	}
+	.port-desc{
+		display:none;
+	}
+	.port-item:hover .port-desc{
+		display:block;
+	}
+}
+
+/* cta area
+========================*/
+.cta{
+	background-color: #a63434;
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+	margin:0;}
+.cta .title{
+	margin-top: 0;
+
+}
+/*foooter area
+=======================*/
+
+.col-3{
+	width:100%;
+	padding:1em 0;
+	text-align: center;
+}
+.col-1{
+	float:right;
+	width:33.333333%;
+}
+.col-1 li{
+	list-style-type: none;
+	text-decoration: none;
+	text-align: left;
+
+}
+
+[class=unstyled-list]:first-child{
+	padding-left:0;
+}
+
+
+footer{
+	margin:0;
+	padding:0;
+	background:#232323;
+}
+footer p{
+	margin:0;
+	padding:0;
+	color: white;
+}
+footer li{
+	color:white;
+}
+.footer-titles{
+	background:  #778899;
+	width:100%;
+	color:white;
+}
+.footer-title{
+	background:  #778899;
+	}
+
+@media(min-width: 40rem){
+	.col-3{
+		width:50%;
+		padding:1em 0;
+		text-align: left;
+		float:left;
+	}
+	.col-1{
+
+		width:16.66666%;
+	}
+	[class=unstyled-list]:first-child{
+		margin-left:40px;
+	}
+	.col-1 li{
+		list-style-type: none;
+		text-decoration: none;
+		text-align: left;
+
+	}
+}

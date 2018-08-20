@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>PrimusLink Inc.</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+	<header>
+		<img src="{{ url_for('static', filename='img/newlogo.png') }}" alt="creative inc logo" class="logo">
+
+		<nav>
+			<ul>
+				<li class="top-options">
+					<a href="#">Home</a>
+				</li>
+				<li class="top-options">
+					<a href="#footer">About</a>
+				</li>
+				<li class="top-options">
+					<a  href="#footer">Contact</a>
+				</li>
+				<li class="login-list"> <a class="button login-button"href="{{url_for('login')}}">log in</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<section class="home-hero">
+		<div class="container home-container">
+		<h1 class="title">PrimusLink
+			<span>
+				<left>
+				Opposites attract,</left><right> Likes stay together</right>
+			</span>
+		</h1>
+		<div class="container full-signup-container">
+		<form class="full-signup">
+			<ul><li><h2 class="sign-up-cta">
+				Create a New Account
+			</h2></li></ul>
+			<ul>
+				<li>
+					<input type="text" name="firstname" class="firstname" placeholder="Name">
+					<input type="text" name="surname" class="surname" placeholder="Surname">
+				</li>
+			</ul>
+			
+			<ul>
+				<li>
+					<input type="text" name="email" class="email" placeholder="Your Email">
+					<input type="password" name="password" class="password" placeholder="New Password">
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<a href ="#facebook"class="button sign-up-button facebook-button">sign up with facebook</a>
+					<a href="#twitter"class="button sign-up-button twitter-button">sign up with &nbsp; twitter</a>
+				</li>
+			</ul>
+		</form>
+	</div>
+		<a href="#" class="button button-accent">Signup for Free</a>
+		</div>
+	</section>
+	<div class="container">
+		<section class="home-about">
+			<div class="home-about-textbox">
+				<h1>What we do
+				</h1>
+				<p><u>The PrimusLink guarantee</u></p>
+				<p>We connect both you and your social media profiles to our dating algorythms.<strong>Instead of asking handfuls of questions about you to learn about who you are, we connect you with people who are alike and opposite you based off of your interests and passions alone.</strong> We aim to link people based off of their potential chemistry, not their asthetics.</p>
+			</div>
+
+		</section>
+	</div>
+	<section class="portfolio">
+		<h1>
+			Our <strong>Stories</strong>
+		</h1>
+		<!-- portfolio 1 -->
+		<figure class="port-item">
+			<img src="{{ url_for('static', filename='img/portfolio-04.jpg') }}" alt="portfolio item">
+			<figcaption class="port-desc">
+				<p>Story Title</p>
+				<a href="#"class="button button-accent button-small">Story Details</a>
+			</figcaption>
+		</figure>
+		<!-- portfolio 2 -->
+		<figure class="port-item">
+			<img src="{{ url_for('static', filename='img/portfolio-04.jpg') }}" alt="portfolio item">
+			<figcaption class="port-desc">
+				<p>Story Title</p>
+				<a href="#"class="button button-accent button-small">Story Details</a>
+			</figcaption>
+		</figure>
+		<!-- portfolio 3 -->
+		<figure class="port-item">
+			<img src="{{ url_for('static', filename='img/portfolio-04.jpg') }}" alt="portfolio item">
+			<figcaption class="port-desc">
+				<p>Story Title</p>
+				<a href="#"class="button button-accent button-small">Story Details</a>
+			</figcaption>
+		</figure>
+		<!-- portfolio 4 -->
+		<figure class="port-item">
+			<img src="{{ url_for('static', filename='img/portfolio-04.jpg') }}" alt="portfolio item">
+			<figcaption class="port-desc">
+				<p>Story Title</p>
+				<a href="#"class="button button-accent button-small">Story Details</a>
+			</figcaption>
+		</figure>
+		<!-- portfolio 5 -->
+		<figure class="port-item">
+			<img src="{{ url_for('static', filename='img/portfolio-04.jpg') }}" alt="portfolio item">
+			<figcaption class="port-desc">
+				<p>Story Title</p>
+				<a href="#"class="button button-accent button-small">Story Details</a>
+			</figcaption>
+		</figure>
+		<!-- portfolio 6-->
+		<figure class="port-item">
+			<img src="{{ url_for('static', filename='img/portfolio-04.jpg') }}" alt="portfolio item">
+			<figcaption class="port-desc">
+				<p>Story Title</p>
+				<a href="#"class="button button-accent button-small">Story Details</a>
+			</figcaption>
+		</figure>
+	</section>
+	<section class="cta">
+		<div class="container">
+			<h1 class="title">Ready to meet your match?
+				<span>
+					Then what are you waiting for?
+				</span>
+			</h1>
+			<a href="#" class="button cta-button">Sign Up Free</a>
+		</div>
+	</section>
+	<footer id="footer">
+		<div class="container">
+			
+			<div class="col-3">
+				<p>PrimusLink prides itself on never sharing or selling your information so you can rest assured, your dating life isn't anyone else's business.</p>
+			</div>
+			<div class="col-1">
+				<ul class="unstyled-list">
+					<li><strong>Home</strong></li>
+					<li>Our Stories</li>
+					<li>What we do</li>
+					<li>Sign Up</li>
+				</ul>
+			</div>
+			<div class="col-1">
+				<ul class="unstyled-list">
+					<li><strong>About</strong></li>
+					<li>Our Team</li>
+				</ul>
+			</div>
+			<div class="col-1">
+				<ul class="unstyled-list">
+					<li><strong>Contact</strong></li>
+					<li>Phone:</li>
+					<li>250-222-2222</li>
+					<li>Email:</li>
+					<li>primus@primuslink.com</li>
+				</ul>
+			</div>
+			</div>
+	</footer>
+</body>
+</html>

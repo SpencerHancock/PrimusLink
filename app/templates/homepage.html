@@ -1,0 +1,9 @@
+{%extends "base.html"%}
+
+{%block content%}
+<h1>{{user.username}}'s links</h1>
+{% for person in users %}
+	<h2>{{person.username}}</h2>
+	<p>{{person.description}}</p>
+{% endfor %}
+{%endblock%}

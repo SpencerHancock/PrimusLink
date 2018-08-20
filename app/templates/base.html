@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}">
+	<title>home</title>
+</head>
+<header class = "home_page_header">
+	<div class = "top left"><a href="/messages"><img src="{{ url_for('static', filename='img/messages.png') }}"></a></div>
+	<div class = "top middle"><h2 class="title"><primus>Primus</primus><primetwo>Link</primetwo></h2>
+	</div>
+	<div class="top-logo-container"><img class = "top_logo"src="{{ url_for('static', filename='img/newlogo.png') }}"></div>
+	<div class = "top right"><a href="/profile"><img src="{{ url_for('static', filename='img/profile.png') }}"></a></div>
+</header>
+<br>
+<br>
+<br>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+<body>
+	{%block content%}
+
+
+	{%endblock%}
+
+
+	<footer lass = "home_page_footer">
+		<div class = "bottom"><img src="{{ url_for('static', filename='img/newlogo.png') }}"></div>
+		
+	</footer>
+
+
+
+</body>
+</html>
