@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700,900");
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes:300,400,700,900');
+
+
+.container{
+	width:95%;
+	margin: 0 auto;
+}
+img{
+	max-width: 100%;
+}
+
+*{
+	box-sizing: border-box;
+	/*transition: all ease-in-out 150ms;*/
+}
+body{
+	margin: 0;
+	padding:0;
+	font-family: "Raleway", sans-serif;
+	text-align:center;
+}
+html{
+	background: ghostwhite;
+}
+/*header
+	==============================*/
+
+.home_page_header{
+	background: white;
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:3rem;
+	border-bottom: lightgrey 1px solid;
+
+}
+.top{
+	height:3rem;
+	object-fit: scale-down;
+	margin:0;
+	padding:0;
+}
+.top-logo-container{display: none;}
+primetwo{
+	color: #a63434;
+}
+primus{
+	color: #85C9C9;
+	}
+
+.top img{
+	float: bottom;
+	width:90%;
+	height:90%;
+	object-fit: scale-down;
+}
+.messages, .profile{
+	display:none;
+}
+.search{
+	float: right;
+}
+.settings-button{
+	float: left;
+}
+.middle{
+	position: absolute;
+	left:50%;
+	top:-.75em;
+	transform: translateX(-50%);
+	width:130px;
+}
+@media(min-width:600px){
+	.middle{
+		position: static;
+		left:auto;
+		float:left;
+		transform: none;
+		margin-top:-.45em;
+		margin-left: 1em;
+	}
+	.top_logo{
+		object-fit: scale-down;
+		height:100%;
+		width: 3.5rem;
+	}
+	.top-logo-container{
+		float: left;
+		display: inline;
+		height:3.5rem;
+		width: 3.5rem;
+		object-fit: scale-down;
+		margin-left: 1.5em;
+		padding:0;
+	}
+	primetwo{
+		padding-right: .5em;
+		border-right: 3px black solid;
+	}
+	.profile, .settings-button, .search, .messages{
+		display:block;
+		float:right;
+		padding: 0 1em 0 0;
+	}
+}
+/*photos
+=====================================*/
+.profile-hero{
+	background:ghostwhite;
+	padding-top: 1rem;
+	height:12rem;
+	width: 100%;
+}
+.body-container{
+	margin:auto;
+	float:center;
+	max-width: 600px;
+}
+.big-photo-container{
+	float:left;
+	width:40%;
+}
+.small-photo-container{
+	margin-top:-.7em;
+	align-items: center;
+	float:left;
+	width:60%;
+}
+.small-photo-change{
+	border-radius: 10px;
+	padding:1em 0 0 1em;
+	float:left;
+	width:32%;
+	height:auto;
+}
+.big-photo{
+	border-radius: 10px;
+	width: 94%;
+	height: 1%;
+	margin:0.2em 0.2em 0.2em 0.4em;
+}
+
+.small-photo{
+	border-radius: 10px;
+}
+
+@media(min-width: 400px){
+	.profile-hero{
+		height:15rem;
+	}
+}
+
+@media(min-width: 600px){
+	.profile-hero{
+		height: 18rem;
+	}
+}
+@media(min-width: 1000px){
+	.profile-hero{
+		height: 28rem;
+	}
+	.body-container{
+		min-width: 1000px;
+	}
+}
+/*description
+======================================*/
+.desc-container{
+	margin:auto;
+height:auto;
+width:auto;
+
+}
+
+.desc-body{
+	margin:auto;
+	height:8em;
+	width:90%;
+	font-family: "Raleway", sans-serif;
+	font-size:10;
+
+}
+.desc-title{
+	}
+@media(min-width: 600px){
+	.desc{
+		width: 50%;
+		float: left;
+	}
+	.preferences-container{
+		width:50%;
+		float: left;
+	}
+	.desc-preferences-container{
+		margin:auto;
+		width:600px;
+		height:auto;
+	}
+	#Gender{
+		margin-top:0;
+	}
+}
+@media(min-width:1000px){
+	.desc-preferences-container{
+		width:1000px;
+	}
+}
+/*links
+====================================*/
+ul{
+	margin:0;
+	padding:0;
+	list-style-type: none;
+	outline: none;
+	border: none;
+}
+fieldset{
+	border:none;
+}
+
+li{
+	list-style-type: none;
+}
+textarea#styled {
+	resize:none;
+	max-width: 500px;
+	width: 95%;
+	height: 120px;
+	border-radius: 10px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-image: url(bg.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+#group2{
+	padding-bottom: 5em;
+}
+.settings{
+	position: absolute;
+	left:50%;
+	transform: translateX(-50%);
+	padding-bottom: 5em;
+}
+/*footer
+====================================*/
+
+footer{
+	position: fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:3rem;
+	border-top:lightgrey 1px solid;
+	background: white
+}
+.bottom-profile{
+	padding-top:0.2em;
+	float:right;
+	height:90%;
+}
+.bottom-messages{
+	padding-top:0.2em;
+	float: left;
+	height:90%;
+
+}
+.bottom{
+	padding-top:0.2em;
+	position: absolute;
+	height:90%;
+	width:auto;
+	left:50%;
+	transform: translateX(-50%);
+}
+
+footer img{
+	object-fit: scale-down;
+	display: inline-block;
+	margin: 0;
+	padding:0;
+	height:100%;
+}
+
+@media(min-width: 600px){
+	footer{
+		display: none;
+	}
+}

@@ -1,69 +1,76 @@
-<!DOCTYPE html>
-<html>
-<head>
-		<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="home_page.css">
-	<title>home</title>
-</head>
-<body>
-	<header class = "home_page_header">
-		<div class = "top left"><a href="#links"><img src="img/messages.png"></a></div>
-		<div class = "top middle"><h2 class="title"><primus>Primus</primus><primetwo>Link</primetwo></h2>
-		</div>
-		<div class="top-logo-container"><img class = "top_logo"src="img/newlogo.png"></div>
-		<div class = "top right"><a href="#profile"><img src="img/profile.png"></a></div>
-	</header>
-	<div class="themainshow">
+{%extends "base.html"%}
+{%block head%}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/profile_page.css')}}">
+{%endblock%}
+{%block content%}
+	<section class="profile-hero">
+		<section class="body-container">
+			<form>
+				<div class="big-photo-container">
+					<a class = "big-photo-change" href="">
+						<img class = "big-photo"src="{{ url_for('static', filename='img/megan2.png')}}">
+					</a>
+				</div>
+				<div class="small-photo-container">
+					<div>
+						<a class ="small-photo-change"href="">
+						<img class = "small-photo" src="{{ url_for('static', filename='img/megan2.png')}}">
+					</a>
+					<a class ="small-photo-change"href="">
+						<img class = "small-photo" src="{{ url_for('static', filename='img/megan2.png')}}">
+					</a>
+					<a class ="small-photo-change"href="">
+						<img class = "small-photo" src="{{ url_for('static', filename='img/megan2.png')}}">
+					</a>
+					<a class ="small-photo-change"href="">
+						<img class = "small-photo" src="{{ url_for('static', filename='img/megan2.png')}}">
+					</a>
+					<a class ="small-photo-change"href="">
+						<img class = "small-photo" src="{{ url_for('static', filename='img/megan2.png')}}">
+					</a>
+					<a class ="small-photo-change"href="">
+						<img class = "small-photo" src="{{ url_for('static', filename='img/megan2.png')}}">
+					</a>
+					</div>
+				</div>
+			</form>
 
-		<section class = "home_page_hero">
-			<div class = "links">
-				<p class = "opposite">Opposite</p>
-				<img src="img/megan2.png">
-				<p class="desc description3">I'm cool and you should like me</p>
-			</div>
-			<div  class = "links">
-				<p class = "like">Like</p>
-				<img src="img/megan2.png">
-				<p class="desc description2">I'm cool and you should like me</p>
-			</div>
-			<div class = "links">
-				<p class = "opposite">Opposite</p>
-				<img src="img/megan2.png">
-				<p class="desc description3">I'm cool and you should like me</p>
-			</div>
-			<div class = "links">
-				<p class = "like">Like</p>
-				<img src="img/megan2.png">
-				<p class="desc description4">I'm cool and you should like me</p>
-			</div>
-			<div class = "links">
-				<p class = "opposite">Opposite</p>
-				<img src="img/megan2.png">
-				<p class="desc description5">I'm cool and you should like me</p>
-			</div>
-			<div class = "links">
-				<p class = "like">Like</p>
-				<img src="img/megan2.png">
-				<p class="desc description6">I'm cool and you should like me</p>
-			</div>
-			
 		</section>
-		<section class="messages">
-			<div><img src=""><p>talk to one</p></div>		
-			<div><img src=""><p>talk to one</p></div>		
-			<div><img src=""><p>talk to one</p></div>		
-			<div><img src=""><p>talk to one</p></div>		
-			<div><img src=""><p>talk to one</p></div>		
-			<div><img src=""><p>talk to one</p></div>		
+	</section>
+	<section class="desc-preferences-container">
+		<section class="desc">
+			<form>
+				<div class="desc-container">
+					<h2 class="desc-title">About Me:</h2>
+					<p id="styled"class = "desc-body">{{user.about_me}}</p>
+				</div>
+			</form>
 		</section>
-	</div>
-	<footer class = "home_page_footer">
-		<div class = "bottom"><img src="img/newlogo.png"></div>
-		
-	</footer>
+		<section class="preferences-container">
+			<form>
+				<ul>
+					<h2 id="preference">Link Peference:</h2>
+					<li>
+						<fieldset id="group1">
+   							 <input type="radio" name="romance">Romance</input>
+    						<input type="radio" name="business">Business</input>
+    						<input type="radio" name="friendship">Friendship</input>
+  						</fieldset>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<h2 id="Gender"> Link Gender:</h2>
+						<fieldset id="group2">
+							<input type="radio" name="choose_male"> Male </input>
+							<input type="radio" name="choose_female"> Female</input>
+							<input type="radio" name="choose_other"> Other </input>	
+						</fieldset>
+					</li>
+				</ul>
+			</form>
+			<div class="settings"><a href="{{url_for('edit_profile')}}">Account Settings</a></div>
+		</section>
+	</section>
 
-
-
-</body>
-</html>
+{%endblock%}
