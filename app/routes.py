@@ -38,7 +38,7 @@ def login():
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
             next_page = 'home'
-        return redirect(url_for(next_page))
+        return redirect(next_page)
     return render_template('login.html', title='Sign In', form=form)
 
 @app.route("/logout")
@@ -86,7 +86,7 @@ def user(username):
 
 @login_required
 def edit_profile():
-    form = EditProfileForm()
+    form = EditProfileForm(current_user.username)
     if form.validate_on_submit():
         current_user.username = form.username.data
         current_user.about_me = form.about_me.data
