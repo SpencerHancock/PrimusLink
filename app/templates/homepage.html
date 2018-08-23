@@ -1,10 +1,21 @@
 {%extends "base.html"%}
 
 {%block content%}
-<h1>{{curent_user.username}}'s links</h1>
-{% for post in posts %}
-	<p>{{post.author.username}} says:</p>
-	<p>{{post.body}}</p>
+	<h1>{{current_user.username}}'s links</h1>
 
-{% endfor %}
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+	        <p>
+	            {{ form.post.label }}<br>
+	            {{ form.post(cols=32, rows=4) }}<br>
+	            {% for error in form.post.errors %}
+	            <span style="color: red;">[{{ error }}]</span>
+	            {% endfor %}
+	        </p>
+	        <p>{{ form.submit() }}</p>
+	</form>
+	{% for post in posts %}
+     {%include '_post.html'%}
+    {% endfor %}
+   
 {%endblock%}
